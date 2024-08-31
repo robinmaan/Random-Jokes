@@ -15,6 +15,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    padding: 20px; /* Added padding for better mobile view */
 }
 
 .container {
@@ -23,35 +24,70 @@ body {
     background: linear-gradient(to right, #eea849, #f46b45);
 
     height: auto;
-    width: 500px;
-    position: absolute;
+    width: 100%;
+    max-width: 500px;
+    position: relative; /* Changed to relative for better alignment on mobile */
     border-radius: 20px;
     border: none;
+    padding: 20px; /* Added padding for better spacing on mobile */
 }
 
 .emoji {
     font-size: 4rem;
-    margin-left: 40%;
+    margin: 0 auto;
+    display: block;
+    text-align: center; /* Centered emoji on mobile */
 }
 
 h1 {
-    margin-left: 130px;
+    text-align: center; /* Centered heading on mobile */
     color: black;
 }
 
 #btn {
-    margin: 70px 0 10px 200px;
-
+    display: block;
+    margin: 50px auto 20px auto; /* Centered button and adjusted margins for mobile */
     padding: 10px;
     border: none;
     border-radius: 10px;
     background-color: rgb(230, 126, 29);
     color: #fcf9f9;
+    width: 60%; /* Adjusted width for better mobile view */
 }
 
 #jokes {
     color: black;
-    margin-left: 50px;
-    margin-top: 20px;
+    margin: 20px 0 0 0; /* Adjusted margins for better spacing on mobile */
     font-size: 20px;
+    text-align: center; /* Centered text on mobile */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 90%; /* Reduced width for tablets and small devices */
+        padding: 15px; /* Adjusted padding for smaller screens */
+    }
+
+    .emoji {
+        font-size: 3rem; /* Reduced emoji size for smaller screens */
+    }
+
+    #btn {
+        width: 80%; /* Adjusted button width for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .emoji {
+        font-size: 2.5rem; /* Further reduced emoji size for small mobile screens */
+    }
+
+    h1 {
+        font-size: 1.5rem; /* Adjusted font size for small mobile screens */
+    }
+
+    #jokes {
+        font-size: 18px; /* Reduced text size for better readability on mobile */
+    }
 }
